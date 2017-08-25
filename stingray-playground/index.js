@@ -28,6 +28,7 @@ function buildWidgetContainer(eventId, modal, affiliateCode) {
         var buttonLabel = document.createTextNode('Launch Modal ()');
 
         button.id = 'modal-trigger';
+        button.type = 'button';
         button.appendChild(buttonLabel);
         checkoutWidget.appendChild(button);
         button.className = 'btn primary w-button';
