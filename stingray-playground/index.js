@@ -23,13 +23,14 @@ function showWidget(eventId, modal, affiliateCode) {
 
 function buildWidgetContainer(eventId, modal, affiliateCode) {
     if (modal === 'on') {
-        var checkoutWidget = document.getElementById('checkout-widget')
+        var checkoutWidget = document.getElementById('button-container')
         var button = document.createElement('button');
-        var buttonLabel = document.createTextNode('Open modal');
+        var buttonLabel = document.createTextNode('Launch Modal ()');
 
         button.id = 'modal-trigger';
         button.appendChild(buttonLabel);
         checkoutWidget.appendChild(button);
+        button.className = 'btn primary w-button';
     }
 
     showWidget(eventId, modal, affiliateCode);

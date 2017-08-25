@@ -5,30 +5,52 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Stingray Playground</title>
+        <link href="normalize.css" rel="stylesheet" type="text/css">
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            WebFont.load({
+                google: {
+                    families: ["Inconsolata:400,700"]
+                }
+            });
+        </script>
         <script src="index.js"></script>
     </head>
 
-    <body>
-        <form action="" method="get">
-            Environment:
-            <select name="env">
-                <option value="dev">Dev</option>
-                <option value="qa">QA</option>
-                <option value="prod">Prod</option>
-            </select>
-             |
-            Event id:
-            <input type="text" name="eid">
-             |
-            Modal:
-            <input type="checkbox" name="modal">
-             |
-            Affiliate Code:
-            <input type="text" name="affiliateCode">
-             | 
-            <input type="submit" value="Reload">
-        </form>
+    <body class="body">
+        <div class="container">
+            <div class="w-form">
+                <form class="form-container" action="" method="get">
+                    <div class="form-block">
+                      <label class="label" for="env">// Environment</label>
+                      <select class="select-field w-select" name="env">
+                        <option value="dev">Dev</option>
+                        <option value="qa">QA</option>
+                        <option value="prod">Prod</option></select>
+                    </div>
+                    <div class="form-block">
+                      <label class="label" for="eid">// EID</label>
+                      <input class="text-field w-input" name="eid" type="text">
+                    </div>
+                    <div class="form-block">
+                      <label class="label" for="affiliateCode">// Affiliate Code</label>
+                      <input class="text-field w-input" name="affiliateCode" type="text">
+                    </div>
+                    <div class="checkbox-field w-checkbox">
+                      <input class="checkbox w-checkbox-input" name="modal" type="checkbox">
+                      <label class="check-label label w-form-label" for="modal">// Modal</label>
+                    </div>
 
-        <div id="checkout-widget" style="margin-top: 10px;"></div>
+                    <div class="divider"></div>
+
+                    <div id="button-container"></div>
+                    <input class="btn secondary w-button" type="submit" value="Reload">
+                </form>
+            </div>
+        </div>
+
+        <div class="inline-container" id="checkout-widget"></div>
+
     </body>
 </html>
